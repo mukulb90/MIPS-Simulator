@@ -13,11 +13,6 @@ using namespace std;
 
 int main (int argc,char* argv[]) {
 
-/*
- * The goal of this program is to write a simple mips with three stage pipeline between fetch and the rest. 
- * there will be only one pipeline so that it will make it simpler to implement.
- * The app should read  a file from input as its instructions and will output the results necessary.
- */
 	bool DEBUG = 0;
 	int clck  = 100;
 	//Makeing sure the file is supplied
