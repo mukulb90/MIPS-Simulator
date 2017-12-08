@@ -6,7 +6,7 @@
 #include <unordered_map>
 #include <chrono>
 #include <thread>
-#include "solution.cpp"
+#include "solution_pipeline.cpp"
 //#include "tester.cpp"
 
 using namespace std;
@@ -22,7 +22,7 @@ int main (int argc,char* argv[]) {
 
 	}
 	if (argc >= 3) {
-                clck = stoi(argv[2]); 
+            clck = stoi(argv[2]);
         }
 
 	if (argc >= 4) {
@@ -36,12 +36,12 @@ int main (int argc,char* argv[]) {
 	}
 	string answer;
 	getline(infile,answer);	
-	cout << "answer is : " << answer <<endl;
-	solution mips (infile,clck,DEBUG);
+	cout << "expected answer is : " << answer << endl;
+	solution mips (infile, clck, DEBUG);
 	cout << "after init" << endl;
 	vector<int>* t_vars = mips.alu();
 	
-	cout << "your answer is : " <<endl;
+	cout << "your answer is : " << endl;
 	int i = 0;
 	for (; i < t_vars->size()-1 ; i++){
 		cout << t_vars->at(i) << ","; 
